@@ -32,7 +32,7 @@ function App() {
     <div className="App">
       <button onClick={handleClick}>Add User</button>
       <div className="list-container">
-        {users.map((item) => (
+        {users.length >0 ?users.map((item) => (
           <div className="list-item" key={item.id}>
             <span>
               <strong>Name:</strong> {item.name}
@@ -41,7 +41,7 @@ function App() {
               Delete
             </button>
           </div>
-        ))}
+        )):(<div> No data </div>)}
       </div>
     </div>
   );
